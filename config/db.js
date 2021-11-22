@@ -5,8 +5,9 @@ const { protocol, user, password, database, host, port } = config
 function dbConnection() {
 
   let url;
-  url = `mongodb://${user}:${password}@${host}:${port}/${database}`
-  console.log("🚀 ~ file: db.js ~ line 19 ~ dbConnection ~ url", url)
+  // url = `mongodb://${user}:${password}@${host}:${port}/${database}`
+
+  url = `mongodb+srv://db:active.123@cluster0.i33o3.mongodb.net/task?retryWrites=true&w=majority`
 
   mongoose.connect(url, {
     // useCreateIndex: true,
